@@ -29,7 +29,20 @@
 
 
 
-    <Button label="Start Calculator" icon="pi pi-arrow-right" iconPos="right" class="!bg-gray-900 !border-none w-full rounded-sm" />
+<!--    <Button as-child icon="pi pi-arrow-right" iconPos="right" class="!bg-gray-900 !border-none w-full rounded-sm">-->
+<!--      <RouterLink to="carbon-calculator">Start Calculator</RouterLink>-->
+<!--    </Button>-->
+
+    <Button v-slot="slotProps" asChild>
+      <RouterLink to="carbon-calculator">
+      <button
+        v-bind="slotProps.a11yAttrs"
+        class="rounded-sm w-full bg-gray-900 text-white border-none px-6 py-3 cursor-pointer transition-all"
+      >
+        Start Calculator
+      </button>
+      </RouterLink>
+    </Button>
 
   </div>
 

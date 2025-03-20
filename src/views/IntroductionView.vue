@@ -1,6 +1,6 @@
 
 <template>
-  <div class="px-6 py-16 md:px-12 lg:px-20 flex items-center justify-center bg-[#F0F6FB] h-screen">
+  <div class="px-6 py-16 md:px-12 lg:px-20 flex items-center justify-center  h-screen">
     <Transition name="fade" mode="out-in">
       <component :is="activeComponent" :activeComp="activateComponent"></component>
     </Transition>
